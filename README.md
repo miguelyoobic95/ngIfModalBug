@@ -1,10 +1,6 @@
 # ngIf - IonModal Bug
 
-The bug arises when using a `ion-modal` and having another, independent component, that has an `ion-content` inside of it.
-
-This causes the functionality of the Angular `ngIf` directive to break completely.
-
-For demonstration purposes, two branches were created. `master` has the bug, while `master-working` shows a working version of the code. The only difference between them is the presence or absence (respectively) of the `ion-content` tag inside the `yoo-button` component (in `design-system/stencil/src/components/core`).
+The bug arises when using a `ion-modal` uses the `ngIf` directive inside of it. Upon rebuilding the application following the first serve, the `ng-If` dependent content is never shown
 
 ## Steps to reproduce the bug:
 
@@ -16,8 +12,6 @@ For demonstration purposes, two branches were created. `master` has the bug, whi
 
 ### Reproduce the bug:
 
-In the home page press the `Open Modal` button to observe the bug.
+In the home page press the `Open Modal` button. If the text is shown, the bug is not present but upon rebuilding stencil or recompiling the Ionic app, the bug will be appear and the `ngIf`-dependent code will not be shown. Inspect the DOM to confirm that the HTML is not rendered. 
 
-If in the `master` branch the `ngIf`-dependent code will not be shown.
-
-If in the `master-working` branch, the code works as expected.
+This only applies to the directives inside the modal `ion-content`. In the Home page, some other `ngIf`-dependent code works as expected.

@@ -23,7 +23,6 @@ export class HomePage {
 
   this.modalCtrl.create({component: ExampleModalComponent, componentProps: {... this.data} }).then(modal => {
       modal.onDidDismiss((ret) => {
-        console.log('ret', ret);
         resolve(ret);
       });
       modal.present();
