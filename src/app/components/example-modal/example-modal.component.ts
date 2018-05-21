@@ -1,6 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { ExampleModalBaseComponent } from '../../bases/example-modal-base';
 
 @Component({
   selector: 'app-example-modal',
@@ -9,12 +8,11 @@ import { ExampleModalBaseComponent } from '../../bases/example-modal-base';
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { 'class': 'ion-page' }
 })
-export class ExampleModalComponent extends ExampleModalBaseComponent {
+export class ExampleModalComponent {
 
 
   isShown: boolean;
   constructor(private modalCtrl: ModalController) {
-    super();
     this.isShown = true;
   }
 

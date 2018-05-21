@@ -10,10 +10,9 @@
 </ion-header>
 <ion-content [forceOverscroll]="false" [scrollEnabled]="false" #content no-bounce>
     <ng-template [ngIf]="true">
-        <p>It is shown</p>
+        <p>It should be shown</p>
         <div>{{data | json}}</div>
     </ng-template>
-
-    <p *ngIf="!isShown">It is not shown</p>
-    <p [hidden]="false">can bind to properties fine</p>
+    <p *ngIf="isShown">It should be shown</p>
+    <p *ngIf="!isShown">It should not shown</p>
 </ion-content>
