@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooButtonComponent Snapshots Should have icon only 1`] = `
+<yoo-button
+  class="icon-only hydrated"
+  data-yoo-button-host=""
+  is-loading="true"
+  text="Button loading"
+>
+  
+  <div
+    class="container loading"
+    data-yoo-button=""
+  >
+    <span
+      class="value"
+      data-yoo-button=""
+    >
+      <img
+        data-yoo-button=""
+        src="assets/loader/loading.svg"
+      />
+    </span>
+  </div>
+</yoo-button>
+`;
+
+exports[`YooButtonComponent Snapshots Should have loading icon and no text 1`] = `
+<yoo-button
+  class="accent hydrated"
+  data-yoo-button-host=""
+  is-loading="true"
+  text="Button loading"
+>
+  
+  <div
+    class="container loading"
+    data-yoo-button=""
+  >
+    <span
+      class="value"
+      data-yoo-button=""
+    >
+      <img
+        data-yoo-button=""
+        src="assets/loader/loading.svg"
+      />
+    </span>
+  </div>
+</yoo-button>
+`;
+
+exports[`YooButtonComponent Snapshots Should have text content 1`] = `
+<yoo-button
+  class="accent hydrated"
+  data-yoo-button-host=""
+  text="Button accent"
+>
+  
+  <button
+    class="container"
+    data-yoo-button=""
+  >
+    <div
+      class="value"
+      data-yoo-button=""
+      data-yoo-button-slot=""
+    >
+      Button accent
+      
+    </div>
+  </button>
+</yoo-button>
+`;
+
+exports[`YooButtonComponent Snapshots Should have text content and icon 1`] = `
+<yoo-button
+  class="hydrated"
+  data-yoo-button-host=""
+  icon="yo-fire"
+  text="Button accent"
+>
+  
+  <button
+    class="container"
+    data-yoo-button=""
+  >
+    <div
+      class="value"
+      data-yoo-button=""
+      data-yoo-button-slot=""
+    >
+      Button accent
+      <span
+        class="icon"
+        data-yoo-button=""
+      >
+        <i
+          class="yo-fire"
+          data-yoo-button=""
+        />
+      </span>
+      
+    </div>
+  </button>
+</yoo-button>
+`;

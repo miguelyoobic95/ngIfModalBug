@@ -1,0 +1,70 @@
+
+
+:host {
+    display: block;
+    &.closed {
+        opacity: 0;
+    }
+    .container {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+        transition: all 0.3s;
+        width:100%;
+        background: red;
+        &.closed {
+            opacity: 0;
+        }
+        .link {
+            color: #ffffff;
+            font-weight: 100;
+            text-decoration: underline;
+            cursor: pointer;
+            opacity: 0.5;
+            font-size: 0.875rem;            
+        }
+        .inner-container {
+            display: flex;
+            justify-content: center;
+            .icon {
+                font-family: 'yoobicons';
+                margin-right: 0.5rem;
+                color: #ffffff;
+            }
+            .text-container {
+                display: flex;
+                justify-content: center;
+                color: #ffffff;
+                .value {
+                    line-height: 1rem;
+                    margin-bottom: 0.25rem;
+                    font-size: 0.875rem;
+                }
+                .heading {
+                    align-self: baseline;
+                    font-weight: bold;
+                    font-size: 0.875rem;
+                }
+            }
+        }
+        .close-container {
+            display: flex;
+            justify-content: flex-end;
+            color: #ffffff;
+            .close {
+                cursor: pointer;
+                font-family: 'yoobicons';
+                margin-left: 1rem;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+:host(.round) {
+    .container {
+        border-radius: 0.5rem;
+    }
+}
+

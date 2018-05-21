@@ -1,0 +1,19 @@
+
+<ion-header class="shadow" no-border [class.statusbar-padding]="isCordova">
+    <ion-toolbar color="light">
+        <ion-buttons slot="start">
+            <ion-button color="dark" (click)="closeModal()">
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Example Modal</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content [forceOverscroll]="false" [scrollEnabled]="false" #content no-bounce>
+    <ng-template [ngIf]="true">
+        <p>It is shown</p>
+        <div>{{data | json}}</div>
+    </ng-template>
+
+    <p *ngIf="!isShown">It is not shown</p>
+    <p [hidden]="false">can bind to properties fine</p>
+</ion-content>

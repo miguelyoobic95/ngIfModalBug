@@ -28,6 +28,11 @@
                 "glob": "**/*",
                 "input": "node_modules/@ionic/angular/dist/ionic",
                 "output": "./ionic"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@shared/design-system",
+                "output": "/"
               }
             ],
             "styles": [
@@ -38,7 +43,11 @@
                 "input": "src/global.scss"
               }
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "node_modules/@shared/design-system/design-system.js"
+              }
+            ]
           },
           "configurations": {
             "production": {
