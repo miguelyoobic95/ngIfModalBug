@@ -34,11 +34,9 @@ export class YooButtonComponent {
 
     render(): JSX.Element {
         return (
-                <ion-content>
-                    <button class={'container ' + (this.disabled ? 'disabled' : '')} disabled={this.disabled} onClick={() => this.click()}>
+                <button class={'container ' + (this.disabled ? 'disabled' : '')} disabled={this.disabled} onClick={() => this.click()}>
                         {this.renderButtonContent()}
-                    </button>
-                </ion-content>
+                </button>
         );
     }
 
