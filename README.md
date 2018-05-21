@@ -1,6 +1,6 @@
 # ngIf - IonModal Bug
 
-The bug arises when using a `ion-modal` uses the `ngIf` directive inside of it. Upon rebuilding the application following the first serve, the `ng-If` dependent content is never shown
+The bug arises when using a `ion-modal` uses the `ngIf` directive inside of it. Upon rebuilding the application following the first serve, the `ngIf`-dependent content is never shown
 
 ## Steps to reproduce the bug:
 
