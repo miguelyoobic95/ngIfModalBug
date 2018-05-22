@@ -5,6 +5,7 @@ export interface Window {
 }
 
 export { YooButtonComponent } from './components/core/button/button';
-export { YooAlertComponent } from './components/core/alert/alert';
+export { YooButtonContentComponent } from './components/core/button-content/button-content';
+export { ModalTriggerComponent } from './components/core/modal-trigger/modal-trigger';
 
 export * from './components';

@@ -27,42 +27,37 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface YooAlert {
-      'animationName': string;
-      'closeable': boolean;
-      'heading': string;
+    interface YooButtonContent {
+      'disabled': boolean;
       'icon': string;
-      'link': string;
+      'isLoading': boolean;
       'text': string;
     }
   }
 
-  interface HTMLYooAlertElement extends StencilComponents.YooAlert, HTMLStencilElement {}
+  interface HTMLYooButtonContentElement extends StencilComponents.YooButtonContent, HTMLStencilElement {}
 
-  var HTMLYooAlertElement: {
-    prototype: HTMLYooAlertElement;
-    new (): HTMLYooAlertElement;
+  var HTMLYooButtonContentElement: {
+    prototype: HTMLYooButtonContentElement;
+    new (): HTMLYooButtonContentElement;
   };
   interface HTMLElementTagNameMap {
-    'yoo-alert': HTMLYooAlertElement;
+    'yoo-button-content': HTMLYooButtonContentElement;
   }
   interface ElementTagNameMap {
-    'yoo-alert': HTMLYooAlertElement;
+    'yoo-button-content': HTMLYooButtonContentElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'yoo-alert': JSXElements.YooAlertAttributes;
+      'yoo-button-content': JSXElements.YooButtonContentAttributes;
     }
   }
   namespace JSXElements {
-    export interface YooAlertAttributes extends HTMLAttributes {
-      'animationName'?: string;
-      'closeable'?: boolean;
-      'heading'?: string;
+    export interface YooButtonContentAttributes extends HTMLAttributes {
+      'disabled'?: boolean;
       'icon'?: string;
-      'link'?: string;
-      'onAlertActionSelected'?: (event: CustomEvent<boolean>) => void;
-      'onAlertClosed'?: (event: CustomEvent<boolean>) => void;
+      'isLoading'?: boolean;
+      'onButtonClicked'?: (event: CustomEvent<boolean>) => void;
       'text'?: string;
     }
   }
@@ -104,6 +99,72 @@ declare global {
       'isLoading'?: boolean;
       'onButtonClicked'?: (event: CustomEvent<boolean>) => void;
       'text'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface ModalContent {
+
+    }
+  }
+
+  interface HTMLModalContentElement extends StencilComponents.ModalContent, HTMLStencilElement {}
+
+  var HTMLModalContentElement: {
+    prototype: HTMLModalContentElement;
+    new (): HTMLModalContentElement;
+  };
+  interface HTMLElementTagNameMap {
+    'modal-content': HTMLModalContentElement;
+  }
+  interface ElementTagNameMap {
+    'modal-content': HTMLModalContentElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'modal-content': JSXElements.ModalContentAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ModalContentAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface ModalTrigger {
+
+    }
+  }
+
+  interface HTMLModalTriggerElement extends StencilComponents.ModalTrigger, HTMLStencilElement {}
+
+  var HTMLModalTriggerElement: {
+    prototype: HTMLModalTriggerElement;
+    new (): HTMLModalTriggerElement;
+  };
+  interface HTMLElementTagNameMap {
+    'modal-trigger': HTMLModalTriggerElement;
+  }
+  interface ElementTagNameMap {
+    'modal-trigger': HTMLModalTriggerElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'modal-trigger': JSXElements.ModalTriggerAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ModalTriggerAttributes extends HTMLAttributes {
+
     }
   }
 }

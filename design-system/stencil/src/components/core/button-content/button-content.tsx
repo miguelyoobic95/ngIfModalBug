@@ -1,11 +1,11 @@
 import { Component, Prop, Event, EventEmitter, Element } from '@stencil/core';
 
 @Component({
-    tag: 'yoo-button',
-    styleUrl: 'button.scss',
+    tag: 'yoo-button-content',
+    styleUrl: 'button-content.scss',
     scoped: true
 })
-export class YooButtonComponent {
+export class YooButtonContentComponent {
 
     @Prop() text: string;
     @Prop() disabled = false;
@@ -34,9 +34,11 @@ export class YooButtonComponent {
 
     render(): JSX.Element {
         return (
-            <button class={'container ' + (this.disabled ? 'disabled' : '')} disabled={this.disabled} onClick={() => this.click()}>
-                    {this.renderButtonContent()}
-            </button>
+            <ion-content>
+                <button class={'container ' + (this.disabled ? 'disabled' : '')} disabled={this.disabled} onClick={() => this.click()}>
+                        {this.renderButtonContent()}
+                </button>
+            </ion-content>
         );
     }
 
