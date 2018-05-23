@@ -35,6 +35,10 @@ export class ModalContentComponent {
                 <div>
                     This content should be visible
                     <yoo-button text="inside stencil"></yoo-button>
+                    <yoo-loader></yoo-loader>
+                    <yoo-button text="inside stencil2"></yoo-button>
+                    <yoo-button text="inside stencil3"></yoo-button>                    
+                    <yoo-button text="inside stencil4"></yoo-button>
                 </div>
             </ion-content>
         ]);

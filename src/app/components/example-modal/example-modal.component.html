@@ -15,5 +15,6 @@
     </ng-template>
     <p *ngIf="isShown">It should be shown as well</p>
     <p *ngIf="!isShown">It should not shown</p>
-    <yoo-button-content text="Button w/ ION CONTENT"></yoo-button-content>
+    <yoo-alert class="success" *ngIf="true" text="alert w/ ngIf"></yoo-alert>
+    <yoo-alert class="success" text="alert without ngIf"></yoo-alert>
 </ion-content>
