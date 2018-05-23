@@ -9,9 +9,11 @@
     </ion-toolbar>
 </ion-header>
 <ion-content [forceOverscroll]="false" [scrollEnabled]="false" #content no-bounce>
+    <div>The content inside this component is controlled with *ngIf</div>
     <ng-template [ngIf]="true">
         <p>It should be shown</p>
     </ng-template>
     <p *ngIf="isShown">It should be shown as well</p>
     <p *ngIf="!isShown">It should not shown</p>
+    <yoo-button-content text="Button w/ ION CONTENT"></yoo-button-content>
 </ion-content>

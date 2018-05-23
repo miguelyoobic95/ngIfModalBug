@@ -20,9 +20,9 @@ export class ModalTriggerComponent {
 
     render(): JSX.Element {
         return (
-            <div onClick={this.openModal.bind(this)}>
-                CLICK to open modal from the stencil side.
-            </div>
+            <button onClick={this.openModal.bind(this)}>
+                Open stencil modal
+            </button>
         );
     }
 }

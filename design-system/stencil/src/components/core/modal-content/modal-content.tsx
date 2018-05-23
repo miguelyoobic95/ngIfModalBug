@@ -17,17 +17,20 @@ export class ModalContentComponent {
 
     render(): JSX.Element {
         return ([
-            <ion-toolbar color="light">
-                <ion-buttons slot="start">
-                    <ion-button class="close" color="dark" onClick={() => this.onCancel()}>
-                       CLOSE
-                    </ion-button>
-                </ion-buttons>
-                <ion-title>Stencil modal</ion-title>
-                <ion-buttons slot="end">
-                    <ion-button color="success">Success</ion-button>
-                </ion-buttons>
-            </ion-toolbar>,
+            <ion-header>
+                <ion-toolbar color="light">
+                    <ion-buttons slot="start">
+                        <ion-button class="close" color="dark" onClick={() => this.onCancel()}>
+                        CLOSE
+                        </ion-button>
+                    </ion-buttons>
+                    <ion-title>Stencil modal</ion-title>
+                    <ion-buttons slot="end">
+                        <ion-button color="success">Success</ion-button>
+                    </ion-buttons>
+                </ion-toolbar>
+            </ion-header>
+            ,
             <ion-content>
                 <div>
                     This content should be visible
