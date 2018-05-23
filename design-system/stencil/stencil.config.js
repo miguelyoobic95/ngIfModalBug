@@ -14,9 +14,18 @@ exports.config = {
       type: 'www'
     }
   ],
+  globalStyle: '../../shared/styles/designsystem/_global.scss',
+  globalScript: 'src/global/index.ts',
+  sassConfig: {
+    includePaths: ['../../shared/styles/designsystem/']
+  },
   enableCache: true,
   plugins: [
     sass({
+      injectGlobalPaths: [
+      '../../shared/styles/designsystem/_variables.scss',
+      '../../shared/styles/designsystem/_mixins.scss'
+    ]
     }),
     postcss({
       plugins: [autoprefixer()]

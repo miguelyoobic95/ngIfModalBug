@@ -125,6 +125,44 @@
         }
       }
     },
+    "interfaces": {
+      "root": "shared/interfaces",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "project": "shared/interfaces/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "shared/interfaces/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "shared/interfaces/src/test.ts",
+            "tsConfig": "shared/interfaces/tsconfig.spec.json",
+            "karmaConfig": "shared/interfaces/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "shared/interfaces/tsconfig.lint.json",
+              "shared/interfaces/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
     "app-e2e": {
       "root": "e2e/",
       "projectType": "application",
